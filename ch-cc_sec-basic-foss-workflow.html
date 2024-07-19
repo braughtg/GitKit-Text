@@ -120,6 +120,9 @@ eBookConfig.enable_chatcodes =  false;
 <script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.f9add1ca35d5ad93.css">
 <link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.f64dcc3632d7a0c3.css">
 <style>
+#topic-appendix-a-staying-synchronized-4-1 { counter-set: topic-appendix-a-staying-synchronized-4-1 0; }
+#topic-appendix-a-staying-synchronized-4-1 > li::marker { content: ""counter(topic-appendix-a-staying-synchronized-4-1,decimal)"."; }
+#topic-appendix-a-staying-synchronized-4-1 > li { counter-increment: topic-appendix-a-staying-synchronized-4-1; }
 </style>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -246,7 +249,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="topic-staying-synchronized.html" class="internal"><span class="codenumber">5</span> <span class="title">Staying Synchronized with the Upstream</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html#ex-understanding-changes-to-the-upstream-repository" class="internal"><span class="codenumber">5.1</span> <span class="title"></span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Overview of Synchronizing with the Upstream Repository</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Verifying the Upstream Remote</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-creating-the-upstream-remote.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Creating the Upstream Remote</span></a></div></li>
@@ -256,7 +262,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Git Command Summary</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-lets-do-it-again.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Let’s Do it Again</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-12.html" class="internal"><span class="codenumber">5.10</span> <span class="title">GitKit Feedback</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-13.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Appendix A</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-appendix-a-staying-synchronized.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Appendix A</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -279,7 +285,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Basic FOSS Workflow</span>
 </h2>
 <p class="watermark">Watermark text: DRAFT</p>
-<div class="para" id="ch-cc_sec-basic-foss-workflow-2">Now that you have found an issue to work on, you will need to colloaborate with the project community to fix that issue. Collaboration in FOSS communities follows patterns of behavior known as <dfn class="terminology">workflows</dfn>. <a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="internal" title="Figure 2.4.1">Figure 2.4.1</a> shows a basic version of a FOSS workflow that is used by contributors working on FOSS projects.</div>
+<div class="para" id="ch-cc_sec-basic-foss-workflow-2">Now that you have found an issue to work on, you will need to colloaborate with the project community to fix that issue. Collaboration in FOSS communities follows patterns of behavior known as <dfn class="terminology">workflows</dfn>. <a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="xref" data-knowl="./knowl/xref/ch-cc_sec-bfw_fig-basic-foss-workflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.1">Figure 2.4.1</a> shows a basic version of a FOSS workflow that is used by contributors working on FOSS projects.</div>
 <div class="para" id="ch-cc_sec-basic-foss-workflow-3"><figure class="figure figure-like" id="ch-cc_sec-bfw_fig-basic-foss-workflow"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/ch-community-collaboration/basic-foss-workflow.png" class="contained" alt="The main project repo is forked into your GitHub space to create your remote copy.  Your remote copy is then cloned into your local development environment to create your local copy. Changes to your local copy are pushed to your remote copy and a pull request is made to the main project."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span>The basic FOSS workflow.</figcaption></figure></div>
 <section class="exercises" id="ch-cc_sec-bfw_exs-github-repository-terminology"><h3 class="heading hide-type">
@@ -287,7 +293,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <article class="exercise exercise-like" id="ch-cc_sec-bfw_ex-github-repository-terminology"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone matching_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="ch-cc_sec-bfw_ex-github-repository-terminology">
-<span data-subcomponent="question"><div class="para" id="ch-cc_sec-bfw_ex-github-repository-terminology-1-1">GitHub (and other repository hosting services) use specific terminology to refer to the copies of the repository.  Match the terminology on the left with the repository in <a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="internal" title="Figure 2.4.1">Figure 2.4.1</a> to which it refers on the right.</div></span><li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-github-repository-terminology_drag1">Upstream</li>
+<span data-subcomponent="question"><div class="para" id="ch-cc_sec-bfw_ex-github-repository-terminology-1-1">GitHub (and other repository hosting services) use specific terminology to refer to the copies of the repository.  Match the terminology on the left with the repository in <a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="xref" data-knowl="./knowl/xref/ch-cc_sec-bfw_fig-basic-foss-workflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.1">Figure 2.4.1</a> to which it refers on the right.</div></span><li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-github-repository-terminology_drag1">Upstream</li>
 <li data-subcomponent="dropzone" for="ch-cc_sec-bfw_ex-github-repository-terminology_drag1">Main project repository</li>
 <li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-github-repository-terminology_drag2">Origin</li>
 <li data-subcomponent="dropzone" for="ch-cc_sec-bfw_ex-github-repository-terminology_drag2">Your Remote Copy</li>
@@ -297,7 +303,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="ch-cc_sec-bfw_ex-github-repository-terminology-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ch-cc_sec-bfw_ex-github-repository-terminology-3-1">Review the diagrams in the class materials.</div></div></details></div></article><article class="exercise exercise-like" id="ch-cc_sec-bfw_ex-workflow-step-definitions"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone matching_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="ch-cc_sec-bfw_ex-workflow-step-definitions">
 <span data-subcomponent="question"><div class="para" id="ch-cc_sec-bfw_ex-workflow-step-definitions-1-1">
-<a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="internal" title="Figure 2.4.1">Figure 2.4.1</a> illustrates a basic workflow that is used in many FOSS projects.  This workflow has the following 5 steps: <dfn class="terminology">Fork</dfn>, <dfn class="terminology">Clone</dfn>, <dfn class="terminology">Edit</dfn>, <dfn class="terminology">Push</dfn>, and <dfn class="terminology">Pull Request</dfn>. Match each term on the left with the appropraite description on the right.</div></span><li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-workflow-step-definitions_drag1">Fork</li>
+<a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_fig-basic-foss-workflow" class="xref" data-knowl="./knowl/xref/ch-cc_sec-bfw_fig-basic-foss-workflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.1">Figure 2.4.1</a> illustrates a basic workflow that is used in many FOSS projects.  This workflow has the following 5 steps: <dfn class="terminology">Fork</dfn>, <dfn class="terminology">Clone</dfn>, <dfn class="terminology">Edit</dfn>, <dfn class="terminology">Push</dfn>, and <dfn class="terminology">Pull Request</dfn>. Match each term on the left with the appropraite description on the right.</div></span><li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-workflow-step-definitions_drag1">Fork</li>
 <li data-subcomponent="dropzone" for="ch-cc_sec-bfw_ex-workflow-step-definitions_drag1">Create a copy of the main project repository in your GitHub space.</li>
 <li data-subcomponent="draggable" id="ch-cc_sec-bfw_ex-workflow-step-definitions_drag2">Clone</li>
 <li data-subcomponent="dropzone" for="ch-cc_sec-bfw_ex-workflow-step-definitions_drag2">Create a copy of your remote copy of the repository into your local development environment.</li>

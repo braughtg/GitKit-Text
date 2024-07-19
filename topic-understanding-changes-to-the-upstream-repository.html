@@ -120,6 +120,9 @@ eBookConfig.enable_chatcodes =  false;
 <script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.f9add1ca35d5ad93.css">
 <link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.f64dcc3632d7a0c3.css">
 <style>
+#topic-appendix-a-staying-synchronized-4-1 { counter-set: topic-appendix-a-staying-synchronized-4-1 0; }
+#topic-appendix-a-staying-synchronized-4-1 > li::marker { content: ""counter(topic-appendix-a-staying-synchronized-4-1,decimal)"."; }
+#topic-appendix-a-staying-synchronized-4-1 > li { counter-increment: topic-appendix-a-staying-synchronized-4-1; }
 </style>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -246,7 +249,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="topic-staying-synchronized.html" class="internal"><span class="codenumber">5</span> <span class="title">Staying Synchronized with the Upstream</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html#ex-understanding-changes-to-the-upstream-repository" class="internal"><span class="codenumber">5.1</span> <span class="title"></span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Overview of Synchronizing with the Upstream Repository</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Verifying the Upstream Remote</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-creating-the-upstream-remote.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Creating the Upstream Remote</span></a></div></li>
@@ -256,7 +262,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Git Command Summary</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-lets-do-it-again.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Let’s Do it Again</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-12.html" class="internal"><span class="codenumber">5.10</span> <span class="title">GitKit Feedback</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-13.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Appendix A</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-appendix-a-staying-synchronized.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Appendix A</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -279,7 +285,61 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">5.1</span><span class="space"> </span><span class="title">Understanding Changes to the Upstream Repository</span>
 </h2>
 <p class="watermark">Watermark text: DRAFT</p>
-<section class="introduction" id="topic-understanding-changes-to-the-upstream-repository-2"><div class="para" id="topic-understanding-changes-to-the-upstream-repository-2-1">Text of section.</div></section></section></div>
+<div class="para" id="topic-understanding-changes-to-the-upstream-repository-2">If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream <code class="code-inline tex2jax_ignore">main</code> branch. That way they become a part of the main project, and everyone can benefit from your work. In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.</div>
+<section class="exercises" id="ex-understanding-changes-to-the-upstream-repository"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h3>
+<div class="para" id="ex-understanding-changes-to-the-upstream-repository-2">
+<a href="topic-understanding-changes-to-the-upstream-repository.html#fig-changes-merged-into-upstream" class="xref" data-knowl="./knowl/xref/fig-changes-merged-into-upstream.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.1">Figure 5.1.1</a> illustrates the state after several commits have been merged into upstream <code class="code-inline tex2jax_ignore">main</code>.</div>
+<div class="para" id="ex-understanding-changes-to-the-upstream-repository-3"><figure class="figure figure-like" id="fig-changes-merged-into-upstream"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/ch-staying-synchronized/changes-merged-into-upstream.png" class="contained" alt="Cloud image of the changes merged into upstream."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.1<span class="period">.</span></span><span class="space"> </span>Changes Merged into Upstream.</figcaption></figure></div>
+<article class="exercise exercise-like" id="ex-merged-commits"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Answer the following questions using Figure 5.1.1.</span>
+</h4>
+<article class="task exercise-like" id="ex-new-commits-merged"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-new-commits-merged" data-multipleanswers="true">
+<div class="para" id="ex-new-commits-merged-1-1">Which commits (give the colors) were merged into the upstream <code class="code-inline tex2jax_ignore">main</code> since the contributor created the feature branch that is shown?</div>
+<li data-component="answer" id="ex-new-commits-merged_opt_a"><div class="para" id="ex-new-commits-merged-2-1-1-1">Red</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_a">
+<li data-component="answer" id="ex-new-commits-merged_opt_b"><div class="para" id="ex-new-commits-merged-2-2-1-1">Yellow</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_b">
+<li data-component="answer" id="ex-new-commits-merged_opt_c"><div class="para" id="ex-new-commits-merged-2-3-1-1">Green</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_c">
+<li data-component="answer" id="ex-new-commits-merged_opt_d"><div class="para" id="ex-new-commits-merged-2-4-1-1">Blue</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_d">
+<li data-component="answer" id="ex-new-commits-merged_opt_e" data-correct=""><div class="para" id="ex-new-commits-merged-2-5-1-1">Pink</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_e">
+<li data-component="answer" id="ex-new-commits-merged_opt_f" data-correct=""><div class="para" id="ex-new-commits-merged-2-6-1-1">Lime Green</div></li>
+<li data-component="feedback" id="ex-new-commits-merged_opt_f">
+</ul></div></div>
+<div class="solutions"><details id="ex-new-commits-merged-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ex-new-commits-merged-3-1">Look at which commits are new in upstream that are not part of the local repository’s <code class="code-inline tex2jax_ignore">main</code> or feature branch.</div></div></details></div></article><article class="task exercise-like" id="ex-developers-commits"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-developers-commits" data-multipleanswers="false">
+<div class="para" id="ex-developers-commits-1-1">Which of the commits did the managers merge from the contributor’s pull request?</div>
+<li data-component="answer" id="ex-developers-commits_opt_a"><div class="para" id="ex-developers-commits-2-1-1-1">Red</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_a"><div class="para" id="ex-developers-commits-2-1-2-1">Red was in <code class="code-inline tex2jax_ignore">main</code> prior to the contributor creating the feature branch.</div></li>
+<li data-component="answer" id="ex-developers-commits_opt_b"><div class="para" id="ex-developers-commits-2-2-1-1">Yellow</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_b"><div class="para" id="ex-developers-commits-2-2-2-1">Yellow was in <code class="code-inline tex2jax_ignore">main</code> prior to the contributor creating the feature branch.</div></li>
+<li data-component="answer" id="ex-developers-commits_opt_c"><div class="para" id="ex-developers-commits-2-3-1-1">Green</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_c"><div class="para" id="ex-developers-commits-2-3-2-1">Green was in <code class="code-inline tex2jax_ignore">main</code> prior to the contributor creating the feature branch.</div></li>
+<li data-component="answer" id="ex-developers-commits_opt_d" data-correct=""><div class="para" id="ex-developers-commits-2-4-1-1">Blue</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_d"><div class="para" id="ex-developers-commits-2-4-2-1">Blue was part of the contributor’s feature branch.</div></li>
+<li data-component="answer" id="ex-developers-commits_opt_e"><div class="para" id="ex-developers-commits-2-5-1-1">Pink</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_e"><div class="para" id="ex-developers-commits-2-5-2-1">Pink was part of another contributor’s pull request.</div></li>
+<li data-component="answer" id="ex-developers-commits_opt_f"><div class="para" id="ex-developers-commits-2-6-1-1">Lime Green</div></li>
+<li data-component="feedback" id="ex-developers-commits_opt_f"><div class="para" id="ex-developers-commits-2-6-2-1">Lime green was part of another contributor’s pull request.</div></li>
+</ul></div></div>
+<div class="solutions"><details id="ex-developers-commits-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ex-developers-commits-3-1">Look at which commits are in the local repository’s feature branch.</div></div></details></div></article></article><article class="exercise exercise-like" id="ex-pink-commit-explanation"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="ex-pink-commit-explanation">
+<div class="para" id="ex-pink-commit-explanation-1-1">Briefly explain how the pink commit could have gotten into the upstream <code class="code-inline tex2jax_ignore">main</code>.</div> <div class="para" id="ex-pink-commit-explanation-1-2"><input type="text" placeholder="" size="45"></div>
+<script type="application/json"></script>
+</div></div></div></article><div class="para" id="ex-understanding-changes-to-the-upstream-repository-6">GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.</div>
+<div class="para" id="ex-understanding-changes-to-the-upstream-repository-7">Use your browser to visit your origin repo on GitHub and ensure that the <code class="code-inline tex2jax_ignore">main</code> branch is selected. Find the part of the page that indicates that your <code class="code-inline tex2jax_ignore">main</code> branch is <em class="emphasis">behind</em> (i.e. not the same as, or out of synch with) the upstream <code class="code-inline tex2jax_ignore">main</code>.</div>
+<div class="para" id="ex-understanding-changes-to-the-upstream-repository-8">If you do not see a message that your main branch is behind the upstream <code class="code-inline tex2jax_ignore">main</code> branch go to <a href="topic-appendix-a-staying-synchronized.html" class="internal" title="Section 5.11: Appendix A">Section 5.11</a> of this chapter and follow the instructions there. Once you complete <a href="topic-appendix-a-staying-synchronized.html" class="internal" title="Section 5.11: Appendix A">Section 5.11</a>, return to this question.</div>
+<article class="exercise exercise-like" id="ex-origin-main-behind-main"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="ex-origin-main-behind-main">
+<div class="para" id="ex-origin-main-behind-main-1-1">Briefly explain what has happened that caused your origin’s <code class="code-inline tex2jax_ignore">main</code> branch to get behind the upstream <code class="code-inline tex2jax_ignore">main</code>.</div> <div class="para" id="ex-origin-main-behind-main-1-2"><input type="text" placeholder="" size="45"></div>
+<script type="application/json"></script>
+</div></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="topic-staying-synchronized.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="topic-overview-of-synchronizing-with-the-upstream-repository.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
