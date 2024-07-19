@@ -484,7 +484,43 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Understanding Changes to the Upstream Repository",
-  "body": " Understanding Changes to the Upstream Repository   Text of section.   "
+  "body": " Understanding Changes to the Upstream Repository  If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream main branch. That way they become a part of the main project, and everyone can benefit from your work. In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.     illustrates the state after several commits have been merged into upstream main .    Changes Merged into Upstream.   Cloud image of the changes merged into upstream.     Answer the following questions using   Which commits (give the colors) were merged into the upstream main since the contributor created the feature branch that is shown?     Red      Yellow      Green      Blue      Pink      Lime Green     Look at which commits are new in upstream that are not part of the local repository's main or feature branch.   Which of the commits did the managers merge from the contributor's pull request?     Red    Red was in main prior to the contributor creating the feature branch.      Yellow    Yellow was in main prior to the contributor creating the feature branch.      Green    Green was in main prior to the contributor creating the feature branch.      Blue    Blue was part of the contributor's feature branch.      Pink    Pink was part of another contributor's pull request.      Lime Green    Lime green was part of another contributor's pull request.     Look at which commits are in the local repository's feature branch.    Briefly explain how the pink commit could have gotten into the upstream main .      GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.  Use your browser to visit your origin repo on GitHub and ensure that the main branch is selected. Find the part of the page that indicates that your main branch is behind (i.e. not the same as, or out of synch with) the upstream main .  If you do not see a message that your main branch is behind the upstream main branch go to of this chapter and follow the instructions there. Once you complete , return to this question.   Briefly explain what has happened that caused your origin’s main branch to get behind the upstream main .       "
+},
+{
+  "id": "fig-changes-merged-into-upstream",
+  "level": "2",
+  "url": "topic-understanding-changes-to-the-upstream-repository.html#fig-changes-merged-into-upstream",
+  "type": "Figure",
+  "number": "5.1.1",
+  "title": "",
+  "body": " Changes Merged into Upstream.   Cloud image of the changes merged into upstream.   "
+},
+{
+  "id": "ex-merged-commits",
+  "level": "2",
+  "url": "topic-understanding-changes-to-the-upstream-repository.html#ex-merged-commits",
+  "type": "Exercise",
+  "number": "5.1.1",
+  "title": "Answer the following questions using Figure 5.1.1.",
+  "body": "Answer the following questions using   Which commits (give the colors) were merged into the upstream main since the contributor created the feature branch that is shown?     Red      Yellow      Green      Blue      Pink      Lime Green     Look at which commits are new in upstream that are not part of the local repository's main or feature branch.   Which of the commits did the managers merge from the contributor's pull request?     Red    Red was in main prior to the contributor creating the feature branch.      Yellow    Yellow was in main prior to the contributor creating the feature branch.      Green    Green was in main prior to the contributor creating the feature branch.      Blue    Blue was part of the contributor's feature branch.      Pink    Pink was part of another contributor's pull request.      Lime Green    Lime green was part of another contributor's pull request.     Look at which commits are in the local repository's feature branch.  "
+},
+{
+  "id": "ex-pink-commit-explanation",
+  "level": "2",
+  "url": "topic-understanding-changes-to-the-upstream-repository.html#ex-pink-commit-explanation",
+  "type": "Exercise",
+  "number": "5.1.2",
+  "title": "",
+  "body": " Briefly explain how the pink commit could have gotten into the upstream main .     "
+},
+{
+  "id": "ex-origin-main-behind-main",
+  "level": "2",
+  "url": "topic-understanding-changes-to-the-upstream-repository.html#ex-origin-main-behind-main",
+  "type": "Exercise",
+  "number": "5.1.3",
+  "title": "",
+  "body": " Briefly explain what has happened that caused your origin’s main branch to get behind the upstream main .     "
 },
 {
   "id": "topic-overview-of-synchronizing-with-the-upstream-repository",
@@ -568,13 +604,13 @@ var ptx_lunr_docs = [
   "body": " GitKit Feedback   Text of section.   "
 },
 {
-  "id": "topic-staying-synchronized-13",
+  "id": "topic-appendix-a-staying-synchronized",
   "level": "1",
-  "url": "topic-staying-synchronized-13.html",
+  "url": "topic-appendix-a-staying-synchronized.html",
   "type": "Section",
   "number": "5.11",
   "title": "Appendix A",
-  "body": " Appendix A   Text of section.   "
+  "body": " Appendix A   The information in this appendix is only important if you were directed here from , otherwise it may be ignored.  You found in that the main branch in your origin repository was not behind the main branch in the upstream repository. This would have happened if you created your fork and clone after the instructor merged the class pull requests for the Round 1 issues. You can recover from this situation using the commands below.  Ensure that you are in the GitKit-FarmData2 directory then use the following commands:   git switch main    git reset --hard 96d9ecee396a8a6b4bda3b2c787deeec6c353217    git push --force origin main     You should now return to and the main branch in your origin should now be behind the main branch in the upstream.  "
 },
 {
   "id": "topic-understanding-merge-conflicts",
