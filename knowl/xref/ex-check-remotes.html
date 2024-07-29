@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7<span class="period">.</span></span>
+</h4>
+<div class="introduction"><div class="para">In this exercise you will see that your clone keeps track of the location of your origin repository. It does this using a piece of information called a <dfn class="terminology">remote</dfn>, which Git uses to store the URLs of remote repositories in the cloud (e.g. on GitHub).</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-check-remotes-a-1-1">Use the following command to ask Git to display a list of the remote repositories (i.e. those on GitHub) that it knows about:</div> <div class="para" id="ex-check-remotes-a-1-2"><code class="code-inline tex2jax_ignore">git remote -v</code></div> <div class="para" id="ex-check-remotes-a-1-3">Copy and paste the output of the <code class="code-inline tex2jax_ignore">git remote -v</code> command here.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-check-remotes-b" data-multipleanswers="false" data-random="">
+<div class="para" id="ex-check-remotes-b-1-1">Examine the output in <a href="topic-cloning-your-origin.html#ex-check-remotes-a" class="xref" data-knowl="./knowl/xref/ex-check-remotes-a.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 3.7.7.a">Task 3.7.7.a</a>. How can you tell from that output that your clone knows about your origin?</div>
+<li data-component="answer" id="ex-check-remotes-b_opt_a" data-correct=""><div class="para" id="ex-check-remotes-b-2-1-1-1">The "origin" lines have a URL with your GitHub username in them.</div></li>
+<li data-component="feedback" id="ex-check-remotes-b_opt_a">
+<li data-component="answer" id="ex-check-remotes-b_opt_b"><div class="para" id="ex-check-remotes-b-2-2-1-1">There are lines that say "origin".</div></li>
+<li data-component="feedback" id="ex-check-remotes-b_opt_b">
+<li data-component="answer" id="ex-check-remotes-b_opt_c"><div class="para" id="ex-check-remotes-b-2-3-1-1">The "origin" lines have a URL that points to GitHub.</div></li>
+<li data-component="feedback" id="ex-check-remotes-b_opt_c">
+<li data-component="answer" id="ex-check-remotes-b_opt_d"><div class="para" id="ex-check-remotes-b-2-4-1-1">It is not possible to tell from the output.</div></li>
+<li data-component="feedback" id="ex-check-remotes-b_opt_d">
+</ul></div></div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Look closely at the "origin" URLs.</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-check-remotes-c" data-multipleanswers="false" data-random="">
+<div class="para" id="ex-check-remotes-c-1-1">How is the origin remote that you see in the output of the <a href="topic-cloning-your-origin.html#ex-check-remotes-a" class="xref" data-knowl="./knowl/xref/ex-check-remotes-a.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 3.7.7.a">Task 3.7.7.a</a> command represented in <a href="topic-cloning-your-origin.html#fig-basic-workflow-clone" class="xref" data-knowl="./knowl/xref/fig-basic-workflow-clone.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.1">Figure 3.7.1</a>?</div>
+<li data-component="answer" id="ex-check-remotes-c_opt_a" data-correct=""><div class="para" id="ex-check-remotes-c-2-1-1-1">The orange dotted arrow from the clone to the origin repository.</div></li>
+<li data-component="feedback" id="ex-check-remotes-c_opt_a">
+<li data-component="answer" id="ex-check-remotes-c_opt_b"><div class="para" id="ex-check-remotes-c-2-2-1-1">The orange dotted arrow from the origin to the upstream repository.</div></li>
+<li data-component="feedback" id="ex-check-remotes-c_opt_b">
+<li data-component="answer" id="ex-check-remotes-c_opt_c"><div class="para" id="ex-check-remotes-c-2-3-1-1">The orange dotted arrow from the clone to the upstream repository.</div></li>
+<li data-component="feedback" id="ex-check-remotes-c_opt_c">
+<li data-component="answer" id="ex-check-remotes-c_opt_d"><div class="para" id="ex-check-remotes-c-2-4-1-1">The blue "Clone" arrow from the origin to the cloned repository.</div></li>
+<li data-component="feedback" id="ex-check-remotes-c_opt_d">
+<li data-component="answer" id="ex-check-remotes-c_opt_e"><div class="para" id="ex-check-remotes-c-2-5-1-1">The origin remote is not represented in the figure.</div></li>
+<li data-component="feedback" id="ex-check-remotes-c_opt_e">
+</ul></div></div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Which arrow would represent the clone knowing the location of the origin?</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-check-remotes-d" data-multipleanswers="false" data-random="">
+<div class="para" id="ex-check-remotes-d-1-1">Which step of the basic FOSS workflow requires that your clone know the location of your origin repository?</div>
+<li data-component="answer" id="ex-check-remotes-d_opt_a"><div class="para" id="ex-check-remotes-d-2-1-1-1">Pull request</div></li>
+<li data-component="feedback" id="ex-check-remotes-d_opt_a">
+<li data-component="answer" id="ex-check-remotes-d_opt_b"><div class="para" id="ex-check-remotes-d-2-2-1-1">Fork</div></li>
+<li data-component="feedback" id="ex-check-remotes-d_opt_b">
+<li data-component="answer" id="ex-check-remotes-d_opt_c"><div class="para" id="ex-check-remotes-d-2-3-1-1">Clone</div></li>
+<li data-component="feedback" id="ex-check-remotes-d_opt_c">
+<li data-component="answer" id="ex-check-remotes-d_opt_d"><div class="para" id="ex-check-remotes-d-2-4-1-1">Edit</div></li>
+<li data-component="feedback" id="ex-check-remotes-d_opt_d">
+<li data-component="answer" id="ex-check-remotes-d_opt_e" data-correct=""><div class="para" id="ex-check-remotes-d-2-5-1-1">Push</div></li>
+<li data-component="feedback" id="ex-check-remotes-d_opt_e">
+</ul></div></div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Think about which step of the basic FOSS workflow will need to send information from the clone back to the origin.</div></details></div></article></article><span class="incontext"><a class="internal" href="topic-cloning-your-origin.html#ex-check-remotes">in-context</a></span>
+</body>
+</html>

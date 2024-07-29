@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Your Development Environment</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="GitKit">
+<meta property="book:author" content="You">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.f64dcc3632d7a0c3.css">
+<style>
+#ex-configure-kit-client-linux-a-1-2 { counter-set: ex-configure-kit-client-linux-a-1-2 0; }
+#ex-configure-kit-client-linux-a-1-2 > li::marker { content: ""counter(ex-configure-kit-client-linux-a-1-2,lower-roman)""; }
+#ex-configure-kit-client-linux-a-1-2 > li { counter-increment: ex-configure-kit-client-linux-a-1-2; }
+#topic-appendix-a-staying-synchronized-4-2 { counter-set: topic-appendix-a-staying-synchronized-4-2 0; }
+#topic-appendix-a-staying-synchronized-4-2 > li::marker { content: ""counter(topic-appendix-a-staying-synchronized-4-2,decimal)"."; }
+#topic-appendix-a-staying-synchronized-4-2 > li { counter-increment: topic-appendix-a-staying-synchronized-4-2; }
+</style>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="the-gitkit-book.html"><span class="title">GitKit:</span> <span class="subtitle">Learn git and GitHub in Context</span></a></h1>
+<p class="byline">You</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="topic-forking-the-upstream.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="topic-communities-and-collaboration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="topic-cloning-your-origin.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-i_sec-instructor-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">To The Instructor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-i_sec-instructor-intro.html#ch-i_sec-instructor-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Linux Kit Client Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-i_sec-instructor-intro.html#ch-i_sec-instructor-intro-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">VSCode Kit Client Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-i_sec-student-preface.html" class="internal"><span class="codenumber">1.2</span> <span class="title">To The Student</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-community-collaboration.html" class="internal"><span class="codenumber">2</span> <span class="title">Spike Chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-foss-communities.html" class="internal"><span class="codenumber">2.1</span> <span class="title">FOSS Communities</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-foss-communities.html#topic-foss-community-principles" class="internal"><span class="codenumber">2.1.1</span> <span class="title">FOSS Community Principles</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-foss-communities.html#ch-cc_sec-fc_ssec-foss-community-roles" class="internal"><span class="codenumber">2.1.2</span> <span class="title">FOSS Community Roles</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-foss-communities.html#ch-cc_sec-fc_ssec-foss-community-roles-3" class="internal"><span class="codenumber">2.1.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-cc_sec-github-account.html" class="internal"><span class="codenumber">2.2</span> <span class="title">GitHub Account</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-github-account.html#ch-cc_sec-ga_exs-github-account" class="internal"><span class="codenumber">2.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-cc_sec-the-issue-tracker.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Issue Tracker</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch-cc_sec-the-issue-tracker.html#ch-cc_sec-it_ssec-exploring-the-issue-tracker" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Exploring the Issue Tracker</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-the-issue-tracker.html#ch-cc_sec-it_exs-exploring-the-issue-tracker" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch-cc_sec-the-issue-tracker.html#ch-cc_sec-it_ssec-claiming-an-issue" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Claiming an Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-the-issue-tracker.html#ch-cc_sec-it_exs-claiming-an-issue" class="internal"><span class="codenumber">2.3.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-cc_sec-basic-foss-workflow.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Basic FOSS Workflow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-basic-foss-workflow.html#ch-cc_sec-bfw_exs-github-repository-terminology" class="internal"><span class="codenumber">2.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-cc_sec-forking-the-upstream.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Forking the Upstream Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-forking-the-upstream.html#ch-cc_sec-ftu_exs-creating-your-fork" class="internal"><span class="codenumber">2.5</span> <span class="title">Creating your Fork</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-cc_sec-development-environment.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Setting up the Local Development Environment</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-cc_sec-cloning-your-origin.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Cloning Your Origin</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-cc_sec-review-and-reflection.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Review and Reflection</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-cc_sec-review-and-reflection.html#ch-cc_sec-rar_exs-likert-tests" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-cc_sec-extra-practice.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Extra Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="topic-communities-and-collaboration.html" class="internal"><span class="codenumber">3</span> <span class="title">Communities and Collaboration</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-foss-communities.html" class="internal"><span class="codenumber">3.1</span> <span class="title">FOSS Communities</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-foss-communities.html#topic-foss-communities-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">FOSS Community Principles</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-foss-communities.html#topic-foss-communities-3-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-foss-communities.html#topic-foss-communities-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">FOSS Community Roles</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-foss-communities.html#topic-foss-communities-4-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-github-account.html" class="internal"><span class="codenumber">3.2</span> <span class="title">GitHub Account</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-github-account.html#topic-github-account-3" class="internal"><span class="codenumber">3.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-the-issue-tracker.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Issue Tracker</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-the-issue-tracker.html#topic-the-issue-tracker-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Exploring the Issue Tracker</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-the-issue-tracker.html#topic-the-issue-tracker-3-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-the-issue-tracker.html#topic-the-issue-tracker-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Claiming an Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-the-issue-tracker.html#topic-the-issue-tracker-4-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-basic-foss-workflow.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Basic FOSS Workflow Concepts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-basic-foss-workflow.html#topic-basic-foss-workflow-3" class="internal"><span class="codenumber">3.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-forking-the-upstream.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Forking the Upstream Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-forking-the-upstream.html#topic-forking-the-upstream-3" class="internal"><span class="codenumber">3.5</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="topic-development-environment.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Your Development Environment</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Starting the Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-3-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Configuring the Git Client</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-4-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Adjusting some GitPod Settings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-5-3" class="internal"><span class="codenumber">3.6.3</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Stopping your Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-6-3" class="internal"><span class="codenumber">3.6.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-restarting-dev-env" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Re-starting your Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-restarting-dev-env-3" class="internal"><span class="codenumber">3.6.5</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-cloning-your-origin.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Cloning Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-cloning-your-origin.html#topic-cloning-your-origin-3" class="internal"><span class="codenumber">3.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-extra-practice-communities.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Extra Practice</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-extra-practice-communities.html#topic-extra-practice-communities-3" class="internal"><span class="codenumber">3.8</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-commands-summary-communities.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-commands-summary-communities.html#topic-git-commands-summary-communities-3" class="internal"><span class="codenumber">3.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-communities.html" class="internal"><span class="codenumber">3.10</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-communities.html#topic-gitkit-feedback-communities-3" class="internal"><span class="codenumber">3.10</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="topic-upstreaming-changes.html" class="internal"><span class="codenumber">4</span> <span class="title">Working Locally and Upstreaming Changes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-exploring-your-local-repository.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Exploring Your Local Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-exploring-your-local-repository.html#topic-exploring-your-local-repository-7" class="internal"><span class="codenumber">4.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-creating-a-feature-branch.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Creating a Feature Branch</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-creating-a-feature-branch.html#topic-creating-a-feature-branch-4" class="internal"><span class="codenumber">4.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-switching-branches.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Switching Branches</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-switching-branches.html#topic-switching-branches-3" class="internal"><span class="codenumber">4.3</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-editing-local-files.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Editing Local Files</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-editing-local-files.html#topic-editing-local-files-3" class="internal"><span class="codenumber">4.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-staging-changes.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Staging Changes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-staging-changes.html#topic-staging-changes-4" class="internal"><span class="codenumber">4.5</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-committing-to-your-local-repository.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Committing to Your Local Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-committing-to-your-local-repository.html#topic-committing-to-your-local-repository-3" class="internal"><span class="codenumber">4.6</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-pushing-a-branch-to-your-origin.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Pushing a Branch to Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pushing-a-branch-to-your-origin.html#topic-pushing-a-branch-to-your-origin-3" class="internal"><span class="codenumber">4.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-creating-a-pull-request.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Creating a Pull Request</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-creating-a-pull-request.html#topic-creating-a-pull-request-3" class="internal"><span class="codenumber">4.8</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-command-summary-upstreaming.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-command-summary-upstreaming.html#topic-git-command-summary-upstreaming-3" class="internal"><span class="codenumber">4.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-upstreaming.html" class="internal"><span class="codenumber">4.10</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-upstreaming.html#topic-gitkit-feedback-upstreaming-3" class="internal"><span class="codenumber">4.10</span> <span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="topic-staying-synchronized.html" class="internal"><span class="codenumber">5</span> <span class="title">Staying Synchronized with the Upstream</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html#topic-understanding-changes-to-the-upstream-repository-3" class="internal"><span class="codenumber">5.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Overview of Synchronizing with the Upstream Repository</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Creating and Verifying the Upstream Remote</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html#topic-verifying-the-upstream-remote-4" class="internal"><span class="codenumber">5.3</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Pulling the Upstream <code class="code-inline tex2jax_ignore">main</code> Branch</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html#topic-pulling-the-upstream-main-branch-2" class="internal"><span class="codenumber">5.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-pushing-main-to-your-origin.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Pushing <code class="code-inline tex2jax_ignore">main</code> to Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pushing-main-to-your-origin.html#topic-pushing-main-to-your-origin-2" class="internal"><span class="codenumber">5.5</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-deleting-a-feature-branch.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Deleting a Feature Branch</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-deleting-a-feature-branch.html#topic-deleting-a-feature-branch-3" class="internal"><span class="codenumber">5.6</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-command-summary-synching.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-command-summary-synching.html#topic-git-command-summary-synching-3" class="internal"><span class="codenumber">5.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-lets-do-it-again.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Let’s Do it Again</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3" class="internal"><span class="codenumber">5.8</span> <span class="title"></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3-2" class="internal"><span class="codenumber">5.8.1.1</span> <span class="title">Claiming Another Issue</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3-3" class="internal"><span class="codenumber">5.8.1.2</span> <span class="title">Fixing the Issue and Upstreaming Your Changes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-synching.html" class="internal"><span class="codenumber">5.9</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-synching.html#topic-gitkit-feedback-synching-3" class="internal"><span class="codenumber">5.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-appendix-a-staying-synchronized.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Appendix A</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-merge-conflicts.html" class="internal"><span class="codenumber">6</span> <span class="title">Handling Merge Conflicts</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-understanding-merge-conflicts.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Understanding Merge Conflicts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-merge-conflicts.html#topic-understanding-merge-conflicts-3" class="internal"><span class="codenumber">6.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Synchronizing with the Upstream Repository</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-merging-the-main-branch-into-a-feature-branch.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Merging the main Branch into a Feature Branch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-resolving-a-merge-conflict.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Resolving a Merge Conflict</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-updating-your-pull-request.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Updating Your Pull Request</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-extra-practice.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Extra Practice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-merge-conflicts-9.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Git Command Summary</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-merge-conflicts-10.html" class="internal"><span class="codenumber">6.8</span> <span class="title">GitKit Feedback</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-merge-conflicts-11.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Appendix A</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content" style="background-image:url('data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; height=&quot;600&quot; width=&quot;600&quot;&gt;&lt;text x=&quot;50%&quot; y=&quot;50%&quot; text-anchor=&quot;middle&quot; transform=&quot;rotate(-45,300,300)&quot; fill=&quot;rgb(204,204,204)&quot; style=&quot;font-family:sans-serif; font-size:5cm;&quot;&gt;DRAFT&lt;/text&gt;&lt;/svg&gt;');"><section class="section" id="topic-development-environment"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.6</span><span class="space"> </span><span class="title">Your Development Environment</span>
+</h2>
+<p class="watermark">Watermark text: DRAFT</p>
+<section class="introduction" id="topic-dev-env-intro"><div class="para" id="topic-dev-env-intro-1">You now have been assigned an <dfn class="terminology">issue</dfn> to work on and yuu have created a <dfn class="terminology">fork</dfn> of the <dfn class="terminology">upstream</dfn> GitKit FarmData2 repository into your GitHub space.</div> <div class="para" id="topic-dev-env-intro-2">To work on your issue you will need to setup your <dfn class="terminology">development environment</dfn>.  Your development environment is where you will create your <dfn class="terminology">clone</dfn> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <dfn class="terminology">push</dfn> those changes to your <dfn class="terminology">origin</dfn>.</div> <div class="para" id="topic-dev-env-intro-3">Many FOSS contributors will setup the development environment on their personal machines. Because student machines vary greatly the GitKit provides a browser based development environment, called a <dfn class="terminology">KitClient</dfn>. This development environment runs in the cloud and you will access it using your web browser.  This development environment includes standard development tools but also has a few features designed specifically to help you stay on track when completing the GitKit’s hands-on exercises.</div></section><section class="subsection" id="topic-development-environment-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="space"> </span><span class="title">Starting the Development Environment</span>
+</h3>
+<section class="introduction" id="topic-development-environment-3-2"><div class="para" id="topic-development-environment-3-2-1">In this section you will learn how to start, configure, stop, and restart your development environment.</div></section><section class="exercises" id="topic-development-environment-3-3"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h4>
+<article class="exercise exercise-like" id="topic-development-environment-3-3-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="topic-development-environment-3-3-2-1-1">Your development environment will run in the cloud using a service called GitPod. Visit <a class="external" href="https://gitpod.io/login" target="_blank"><code class="code-inline tex2jax_ignore">gitpod.io/login</code></a> and login using the “Continue with GitHub” button and providing your GitHub username and password.</div></article><article class="exercise exercise-like" id="ex-create-kit-client"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-create-kit-client-1"><div class="para" id="ex-create-kit-client-1-1">The following tasks will guide you through the process of starting and configuring your  development environment.</div></div>
+<article class="task exercise-like" id="ex-create-kit-client-linux-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-create-kit-client-linux-a-1-1">Click this link to <a class="external" href="https://gitpod.io/#https://github.com/hfossedu/KitClient-Linux-GitPod" target="_blank">Launch KitClient</a><details class="ptx-footnote" aria-live="polite" id="ex-create-kit-client-linux-a-1-1-2"><summary class="ptx-footnote__number" title="Footnote 3.6.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ex-create-kit-client-linux-a-1-1-2"><code class="code-inline tex2jax_ignore">gitpod.io/#https://github.com/hfossedu/KitClient-Linux-GitPod</code></div></details> in GitPod.</div></article><article class="task exercise-like" id="ex-create-kit-client-linux-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-create-kit-client-linux-b-1-1">Choose "Terminal" as the "Editor - Browser" and "Standard" as the machine "Class" as shown here: <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ch-communities-and-collaboration/gitpod-create-linux-workspace.png" class="contained" alt="Creating the local development environment in GitPod."></div>
+</div></article><article class="task exercise-like" id="ex-create-kit-client-linux-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="ex-create-kit-client-linux-c-1-1">Click the "Continue" button and wait for a few minutes until output that is similar to that shown here to appear:</div> <div class="para" id="ex-create-kit-client-linux-c-1-2"><code class="code-inline tex2jax_ignore"> *********************************************************************************
+  *********************************************************************************
+  Connect to the KitClient with your browser at:                                   
+  https://6901-hfossedu-kitclientlinux-kkguybiovbj.ws-us115.gitpod.io              
+  *********************************************************************************
+  *********************************************************************************</code></div></article><article class="task exercise-like" id="ex-create-kit-client-linux-d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="ex-create-kit-client-linux-d-1-1">Click the link in your output that is similar to the one that is shown above.</div></article><article class="task exercise-like" id="ex-create-kit-client-linux-e"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="ex-create-kit-client-linux-e-1-1">Click the "Connect" button that appears in your browser.</div> <div class="para" id="ex-create-kit-client-linux-e-1-2">After clicking the "Connect" button your development environment should open in the browser. It will appear similar to the window shown in <a href="topic-development-environment.html#fig-linux-kit-client" class="xref" data-knowl="./knowl/xref/fig-linux-kit-client.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.6.1">Figure 3.6.1</a>.</div> <div class="para" id="ex-create-kit-client-linux-e-1-3"><figure class="figure figure-like" id="fig-linux-kit-client"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/ch-communities-and-collaboration/linux-kitclient.png" class="contained" alt="The development environment window displaying a Linux desktop."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>The development environment.</figcaption></figure></div></article></article><article class="exercise exercise-like" id="ex-configure-kit-client-linux"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-configure-kit-client-linux-1"><div class="para" id="ex-configure-kit-client-linux-1-1">There are a few additional things that you can to to make working in your development environment more convenient.</div></div>
+<article class="task exercise-like" id="ex-configure-kit-client-linux-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-configure-kit-client-linux-a-1-1">Use the following steps to make the development environment fill and resize with your browser window.</div> <ol class="lower-roman" id="ex-configure-kit-client-linux-a-1-2">
+<li id="ex-configure-kit-client-linux-a-1-2-1"><div class="para" id="p-derived-ex-configure-kit-client-linux-a-1-2-1">Open the "noVNC Menu" by clicking the little tab at the left edge of the development environment window. <a href="topic-development-environment.html#fig-linux-kit-client" class="xref" data-knowl="./knowl/xref/fig-linux-kit-client.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.6.1">Figure 3.6.1</a> shows the "noVNC Menu" opened.</div></li>
+<li id="ex-configure-kit-client-linux-a-1-2-2"><div class="para" id="p-derived-ex-configure-kit-client-linux-a-1-2-2">Click "Gear Icon" to open the "noVNC Settings".  <a href="topic-development-environment.html#fig-linux-kit-client" class="xref" data-knowl="./knowl/xref/fig-linux-kit-client.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.6.1">Figure 3.6.1</a> shows the "noVNC Settings" open.</div></li>
+<li id="ex-configure-kit-client-linux-a-1-2-3"><div class="para" id="p-derived-ex-configure-kit-client-linux-a-1-2-3">Set the "Scaling Mode" to "Remote Resizing".</div></li>
+</ol></article><article class="task exercise-like" id="ex-configure-kit-client-linux-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-configure-kit-client-linux-b-1-1">To simplify pasting answers into this text, it is recommended that you open the text using the Firefox browser within the local development environment.</div> <div class="para" id="ex-configure-kit-client-linux-b-1-2">Copy and paste within the development environment can be done via an application’s "Edit" menu, the "right click" menu, or keyboard shortcuts.  This tutorial on <a class="external" href="https://www.xda-developers.com/how-copy-paste-linux/" target="_blank">Copy and Paste on Linux</a><details class="ptx-footnote" aria-live="polite" id="ex-configure-kit-client-linux-b-1-2-2"><summary class="ptx-footnote__number" title="Footnote 3.6.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="ex-configure-kit-client-linux-b-1-2-2"><code class="code-inline tex2jax_ignore">www.xda-developers.com/how-copy-paste-linux/</code></div></details> may be helpful if you are not a Linux user.</div> <div class="para" id="ex-configure-kit-client-linux-b-1-3">Copy and paste between your host machine and the development environment can be done, but it requires that you paste the content into the "Clipboard" on the "noVNC Menu".</div></article></article></section></section><section class="subsection" id="topic-development-environment-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="space"> </span><span class="title">Configuring the Git Client</span>
+</h3>
+<section class="introduction" id="topic-development-environment-4-2"><div class="para" id="topic-development-environment-4-2-1">Your development environment includes a <dfn class="terminology">Git client</dfn>. The Git client is the tool that you will use to interact with Git repositories, such as the GitKit FarmData2 repository.</div> <div class="para" id="topic-development-environment-4-2-2">There are lots of different Git clients. Some are graphical and some use a text interface. These exercises, introduce you to Git using its text-based <dfn class="terminology">command line interface (CLI)</dfn>.  This is the most general way to interact with Git and will provide a conceptual foundation for using any other Git client that you might encounter.</div></section><section class="exercises" id="topic-development-environment-4-3"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h4>
+<article class="exercise exercise-like" id="ex-open-terminal-linux"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-open-terminal-linux-1"><div class="para" id="ex-open-terminal-linux-1-1">You will interact with Git using its command line interface via a Terminal.  Use the following steps to open a Terminal.</div></div>
+<article class="task exercise-like" id="ex-open-terminal-a-linux"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-open-terminal-a-linux-1-1">Click the "Terminal" icon at the bottom of the development environment window to open a new Terminal.</div></article><article class="task exercise-like" id="ex-open-terminal-b-linux"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-open-terminal-b-linux-1-1">Enter your name at the prompt and press enter.  This will customize the Terminal prompt for you.</div></article></article><article class="exercise exercise-like" id="ex-git-version"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-git-version-1">You can learn about the <code class="code-inline tex2jax_ignore">git</code> command by running it without any additional arguments.</div>
+<article class="task exercise-like" id="ex-git-version-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-git-version-a-1-1">Enter the command <code class="code-inline tex2jax_ignore">git</code> into the Terminal.</div></article><article class="task exercise-like" id="ex-git-version-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-git-version-b-1-1">Give a <code class="code-inline tex2jax_ignore">git</code> command that will cause ,<code class="code-inline tex2jax_ignore">git</code> to display its version.</div> <div class="solutions"><details id="ex-git-version-b-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ex-git-version-b-2-1">Use the output from <a href="topic-development-environment.html#ex-git-version-a" class="xref" data-knowl="./knowl/xref/ex-git-version-a.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 3.6.2.2.a">Task 3.6.2.2.a</a> to determine what flag to pass to <code class="code-inline tex2jax_ignore">git</code>.</div></div></details></div></article><article class="task exercise-like" id="ex-git-version-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="ex-git-version-c-1-1">What version of the <code class="code-inline tex2jax_ignore">git</code> command line client is installed in your development environment?</div> <div class="solutions"><details id="ex-git-version-c-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ex-git-version-c-2-1">Use the command that you identified in <a href="topic-development-environment.html#ex-git-version-b" class="xref" data-knowl="./knowl/xref/ex-git-version-b.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 3.6.2.2.b">Task 3.6.2.2.b</a> to determine the <code class="code-inline tex2jax_ignore">git</code> version.</div></div></details></div></article></article><article class="exercise exercise-like" id="ex-configure-git"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-configure-git-1">
+<div class="para" id="ex-configure-git-1-1">Recall from class that Git repositories maintain a complete history of all changes, including who made each change.  To do this, Git needs to know a little bit of information about you.</div> <div class="para" id="ex-configure-git-1-2">Git identifies the author of each change using two pieces of information: A name and an e-mail. For name, you might decide to your full name, or a nickname, or your GitHub username.  Just keep in mind that whatever name you use will be associated with all of the changes you make. For e-mail, you can again use any valid e-mail associated with you.</div> <div class="para" id="ex-configure-git-1-3">The tasks in this exercise will guide you through the process of configuring the Git client in your development environment.</div>
+</div>
+<article class="task exercise-like" id="ex-configure-git-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-configure-git-a-1-1">Use the following command to set the name that Git will associate with your changes:</div> <div class="para" id="ex-configure-git-a-1-2"><code class="code-inline tex2jax_ignore">git config --global user.name "&lt;name&gt;"</code></div> <div class="para" id="ex-configure-git-a-1-3">Replace <code class="code-inline tex2jax_ignore">"&lt;name&gt;"</code> with the name you wish to use and be sure not to include the &lt; and &gt;.</div></article><article class="task exercise-like" id="ex-configure-git-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-configure-git-b-1-1">Use the following command to set the e-mail that Git will associate with your changes:</div> <div class="para" id="ex-configure-git-b-1-2"><code class="code-inline tex2jax_ignore">git config --global user.email "&lt;e-mail&gt;"</code></div> <div class="para" id="ex-configure-git-b-1-3">Replace <code class="code-inline tex2jax_ignore">"&lt;e-mail&gt;"</code> with the name you wish to use and be sure not to include the &lt; and &gt;.</div></article><article class="task exercise-like" id="ex-configure-git-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="ex-configure-git-c-1-1">Use the following command to display Git’s global configuration including the two new settings you just added:</div> <div class="para" id="ex-configure-git-c-1-2"><code class="code-inline tex2jax_ignore">git config --global --list</code></div> <div class="para" id="ex-configure-git-c-1-3">Give the output of this command as your answer for this task.</div></article></article></section></section><section class="subsection" id="topic-development-environment-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="space"> </span><span class="title">Adjusting some GitPod Settings</span>
+</h3>
+<section class="introduction" id="topic-development-environment-5-2"><div class="para" id="topic-development-environment-5-2-1">There are a few GitPod settings that you can change that will make working with your development environment more convenient.</div></section><section class="exercises" id="topic-development-environment-5-3"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h4>
+<article class="exercise exercise-like" id="ex-gitpod-settings"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-gitpod-settings-1"><div class="para" id="ex-gitpod-settings-1-1">Use the following steps to adjust your GitPod settings.</div></div>
+<article class="task exercise-like" id="ex-gitpod-settings-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-gitpod-settings-a-1-1">Open your GitPod workspaces in a browser by visiting <a class="external" href="https://gitpod.io/workspaces" target="_blank"><code class="code-inline tex2jax_ignore">https://gitpod.io/workspaces</code></a>.</div></article><article class="task exercise-like" id="ex-gitpod-settings-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-gitpod-settings-b-1-1">Choose "Rename" from the "⋮" (three vertical dots) menu to the right of the KitClient workspace and rename the workspace to be "GitKit Dev Env" or something else that you will remember easily.</div></article><article class="task exercise-like" id="ex-gitpod-settings-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="ex-gitpod-settings-c-1-1">Click the "Pushpin" icon, or choose "Pin" from the "⋮" (three vertical dots) menu to the right of the "GitKit Dev Env" workspace.</div> <div class="para" id="ex-gitpod-settings-c-1-2">This will <dfn class="terminology">Pin</dfn> your GitKit workspace making it easier to find, and will also prevent it from becoming inactive or being deleted if you don’t use it for a few days.</div></article><article class="task exercise-like" id="ex-gitpod-settings-d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="ex-gitpod-settings-d-1-1">Open your GitPod preferences in a browser by visiting <a class="external" href="https://gitpod.io/user/preferences" target="_blank"><code class="code-inline tex2jax_ignore">https://gitpod.io/user/preferences</code></a>.</div></article><article class="task exercise-like" id="ex-gitpod-settings-e"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="ex-gitpod-settings-e-1-1">Set your “Timeout” to 10 minutes. This will stop your development environment if you are away from it for more than 5 minutes.  This will help to ensure that your free GitPod credits are not accidentally used up if you forget to stop your development environment.</div> <div class="para" id="ex-gitpod-settings-e-1-2">If your development environment times out and stops you can restart it using the steps in <a href="topic-development-environment.html#topic-restarting-dev-env" class="internal" title="Subsection 3.6.5: Re-starting your Development Environment">Subsection 3.6.5</a>.</div></article></article></section></section><section class="subsection" id="topic-development-environment-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="space"> </span><span class="title">Stopping your Development Environment</span>
+</h3>
+<section class="introduction" id="topic-development-environment-6-2"><div class="para" id="topic-development-environment-6-2-1">At some point you will complete this assignment or want to take a break and do other things. When you do so, you should stop your development environment.</div></section><section class="exercises" id="topic-development-environment-6-3"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h4>
+<article class="exercise exercise-like" id="ex-stopping-dev-env"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-stopping-dev-env-1"><div class="para" id="ex-stopping-dev-env-1-1">You can stop your development environment using the following steps.</div></div>
+<article class="task exercise-like" id="ex-stopping-dev-env-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-stopping-dev-env-a-1-1">Open your GitPod workspaces in a browser by visiting <a class="external" href="https://gitpod.io/workspaces" target="_blank"><code class="code-inline tex2jax_ignore">https://gitpod.io/workspaces</code></a>
+</div></article><article class="task exercise-like" id="ex-stopping-dev-env-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-stopping-dev-env-b-1-1">Choose "Stop" from the "⋮" (three vertical dots) menu to the right of the "GitKit Dev Env" workspace.</div></article></article></section></section><section class="subsection" id="topic-restarting-dev-env"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="space"> </span><span class="title">Re-starting your Development Environment</span>
+</h3>
+<section class="introduction" id="topic-restarting-dev-env-2"><div class="para" id="topic-restarting-dev-env-2-1">When you already have a GitKit development environment and want to continue working on the GitKit exercises, you will need to <dfn class="terminology">restart</dfn> it.</div></section><section class="exercises" id="topic-restarting-dev-env-3"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
+</h4>
+<article class="exercise exercise-like" id="ex-restarting-dev-env"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="ex-restarting-dev-env-1"><div class="para" id="ex-restarting-dev-env-1-1">Restart your development environment using the following steps.</div></div>
+<article class="task exercise-like" id="ex-restarting-dev-env-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="ex-restarting-dev-env-a-1-1">Open your GitPod workspaces in a browser by visiting <a class="external" href="https://gitpod.io/workspaces" target="_blank"><code class="code-inline tex2jax_ignore">https://gitpod.io/workspaces</code></a>
+</div></article><article class="task exercise-like" id="ex-restarting-dev-env-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="ex-restarting-dev-env-b-1-1">Click the name of your "GitKit Dev Env" workspace or choose "Open" from the "⋮" (three vertical dots) menu to the right of its name.</div></article><article class="task exercise-like" id="ex-restarting-dev-env-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="ex-restarting-dev-env-c-1-1">Wait for the text similar to that in <a href="topic-development-environment.html#ex-create-kit-client-linux-c" class="xref" data-knowl="./knowl/xref/ex-create-kit-client-linux-c.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 3.6.1.2.c">Task 3.6.1.2.c</a> to appear and click the link.</div></article></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="topic-forking-the-upstream.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="topic-cloning-your-origin.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

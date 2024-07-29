@@ -120,6 +120,9 @@ eBookConfig.enable_chatcodes =  false;
 <script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runtime.740db250e511e1cc.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.9813637ef2f0e0ee.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-347.f9add1ca35d5ad93.css">
 <link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.3.3/prefix-runestone.f64dcc3632d7a0c3.css">
 <style>
+#ex-configure-kit-client-linux-a-1-2 { counter-set: ex-configure-kit-client-linux-a-1-2 0; }
+#ex-configure-kit-client-linux-a-1-2 > li::marker { content: ""counter(ex-configure-kit-client-linux-a-1-2,lower-roman)""; }
+#ex-configure-kit-client-linux-a-1-2 > li { counter-increment: ex-configure-kit-client-linux-a-1-2; }
 #topic-appendix-a-staying-synchronized-4-2 { counter-set: topic-appendix-a-staying-synchronized-4-2 0; }
 #topic-appendix-a-staying-synchronized-4-2 > li::marker { content: ""counter(topic-appendix-a-staying-synchronized-4-2,decimal)"."; }
 #topic-appendix-a-staying-synchronized-4-2 > li { counter-increment: topic-appendix-a-staying-synchronized-4-2; }
@@ -142,7 +145,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="topic-basic-foss-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="topic-communities-and-collaboration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="topic-local-development-environment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="topic-basic-foss-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="topic-communities-and-collaboration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="topic-development-environment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -260,15 +263,46 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-forking-the-upstream.html#topic-forking-the-upstream-3" class="internal"><span class="codenumber">3.5</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="topic-local-development-environment.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Setting up Your Local Development Environment</span></a></div>
+<div class="toc-title-box"><a href="topic-development-environment.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Your Development Environment</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-local-development-environment.html#topic-local-development-environment-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title"></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="topic-local-development-environment.html#topic-local-development-environment-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Running the KitClient</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Starting the Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-3-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Configuring the Git Client</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-4-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Adjusting some GitPod Settings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-5-3" class="internal"><span class="codenumber">3.6.3</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Stopping your Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-development-environment-6-3" class="internal"><span class="codenumber">3.6.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="topic-development-environment.html#topic-restarting-dev-env" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Re-starting your Development Environment</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-development-environment.html#topic-restarting-dev-env-3" class="internal"><span class="codenumber">3.6.5</span> <span class="title"></span></a></div></li></ul>
+</li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-cloning-your-origin.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Cloning Your Origin</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-communities-and-collaboration-10.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Extra Practice</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-communities-and-collaboration-11.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Git Command Summary</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-cloning-your-origin.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Cloning Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-cloning-your-origin.html#topic-cloning-your-origin-3" class="internal"><span class="codenumber">3.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-extra-practice-communities.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Extra Practice</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-extra-practice-communities.html#topic-extra-practice-communities-3" class="internal"><span class="codenumber">3.8</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-commands-summary-communities.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-commands-summary-communities.html#topic-git-commands-summary-communities-3" class="internal"><span class="codenumber">3.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-communities.html" class="internal"><span class="codenumber">3.10</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-communities.html#topic-gitkit-feedback-communities-3" class="internal"><span class="codenumber">3.10</span> <span class="title"></span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -276,20 +310,44 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="topic-exploring-your-local-repository.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Exploring Your Local Repository</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-exploring-your-local-repository.html#ex-understanding-your-local-repository" class="internal"><span class="codenumber">4.1</span> <span class="title"></span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-exploring-your-local-repository.html#topic-exploring-your-local-repository-7" class="internal"><span class="codenumber">4.1</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="topic-creating-a-feature-branch.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Creating a Feature Branch</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-creating-a-feature-branch.html#ex-creating-a-feature-branch" class="internal"><span class="codenumber">4.2</span> <span class="title"></span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-creating-a-feature-branch.html#topic-creating-a-feature-branch-4" class="internal"><span class="codenumber">4.2</span> <span class="title"></span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-switching-branches.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Switching Branches</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-editing-local-files.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Editing Local Files</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staging-changes.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Staging Changes</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-commiting-to-your-local-repository.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Commiting to Your Local Repository</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-pushing-a-branch-to-your-origin.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Pushing a Branch to Your Origin</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-creating-a-pull-request.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Creating a Pull Request</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-upstreaming-changes-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Git Command Summary</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-upstreaming-changes-12.html" class="internal"><span class="codenumber">4.10</span> <span class="title">GitKit Feedback</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-switching-branches.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Switching Branches</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-switching-branches.html#topic-switching-branches-3" class="internal"><span class="codenumber">4.3</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-editing-local-files.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Editing Local Files</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-editing-local-files.html#topic-editing-local-files-3" class="internal"><span class="codenumber">4.4</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-staging-changes.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Staging Changes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-staging-changes.html#topic-staging-changes-4" class="internal"><span class="codenumber">4.5</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-committing-to-your-local-repository.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Committing to Your Local Repository</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-committing-to-your-local-repository.html#topic-committing-to-your-local-repository-3" class="internal"><span class="codenumber">4.6</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-pushing-a-branch-to-your-origin.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Pushing a Branch to Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pushing-a-branch-to-your-origin.html#topic-pushing-a-branch-to-your-origin-3" class="internal"><span class="codenumber">4.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-creating-a-pull-request.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Creating a Pull Request</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-creating-a-pull-request.html#topic-creating-a-pull-request-3" class="internal"><span class="codenumber">4.8</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-command-summary-upstreaming.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-command-summary-upstreaming.html#topic-git-command-summary-upstreaming-3" class="internal"><span class="codenumber">4.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-upstreaming.html" class="internal"><span class="codenumber">4.10</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-upstreaming.html#topic-gitkit-feedback-upstreaming-3" class="internal"><span class="codenumber">4.10</span> <span class="title"></span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -299,31 +357,51 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Understanding Changes to the Upstream Repository</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-changes-to-the-upstream-repository.html#topic-understanding-changes-to-the-upstream-repository-3" class="internal"><span class="codenumber">5.1</span> <span class="title"></span></a></div></li></ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Overview of Synchronizing with the Upstream Repository</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Overview of Synchronizing with the Upstream Repository</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-overview-of-synchronizing-with-the-upstream-repository.html#ex-overview-of-synchronizing-with-the-upstream-repository" class="internal"><span class="codenumber">5.2</span> <span class="title"></span></a></div></li></ul>
+<div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Creating and Verifying the Upstream Remote</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html#topic-verifying-the-upstream-remote-4" class="internal"><span class="codenumber">5.3</span> <span class="title"></span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Creating the Upstream Remote</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-verifying-the-upstream-remote.html#ex-exploring-your-local-repository" class="internal"><span class="codenumber">5.3</span> <span class="title"></span></a></div></li></ul>
+<div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Pulling the Upstream <code class="code-inline tex2jax_ignore">main</code> Branch</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html#topic-pulling-the-upstream-main-branch-2" class="internal"><span class="codenumber">5.4</span> <span class="title"></span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-creating-the-upstream-remote.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Creating the Upstream Remote</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Pulling the Upstream <code class="code-inline tex2jax_ignore">main</code> Branch</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pulling-the-upstream-main-branch.html#ex-pulling-the-upstream-main-branch" class="internal"><span class="codenumber">5.5</span> <span class="title"></span></a></div></li></ul>
+<div class="toc-title-box"><a href="topic-pushing-main-to-your-origin.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Pushing <code class="code-inline tex2jax_ignore">main</code> to Your Origin</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-pushing-main-to-your-origin.html#topic-pushing-main-to-your-origin-2" class="internal"><span class="codenumber">5.5</span> <span class="title"></span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-pushing-main-to-your-origin.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Pushing main to Your Origin</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-deleting-a-feature-branch.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Deleting a Feature Branch</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Git Command Summary</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-lets-do-it-again.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Let’s Do it Again</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-staying-synchronized-12.html" class="internal"><span class="codenumber">5.10</span> <span class="title">GitKit Feedback</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-appendix-a-staying-synchronized.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Appendix A</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-deleting-a-feature-branch.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Deleting a Feature Branch</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-deleting-a-feature-branch.html#topic-deleting-a-feature-branch-3" class="internal"><span class="codenumber">5.6</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-git-command-summary-synching.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Git Command Summary</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-git-command-summary-synching.html#topic-git-command-summary-synching-3" class="internal"><span class="codenumber">5.7</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-lets-do-it-again.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Let’s Do it Again</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3" class="internal"><span class="codenumber">5.8</span> <span class="title"></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3-2" class="internal"><span class="codenumber">5.8.1.1</span> <span class="title">Claiming Another Issue</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="topic-lets-do-it-again.html#topic-lets-do-it-again-3-3" class="internal"><span class="codenumber">5.8.1.2</span> <span class="title">Fixing the Issue and Upstreaming Your Changes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-gitkit-feedback-synching.html" class="internal"><span class="codenumber">5.9</span> <span class="title">GitKit Feedback</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-gitkit-feedback-synching.html#topic-gitkit-feedback-synching-3" class="internal"><span class="codenumber">5.9</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-appendix-a-staying-synchronized.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Appendix A</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-merge-conflicts.html" class="internal"><span class="codenumber">6</span> <span class="title">Handling Merge Conflicts</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-understanding-merge-conflicts.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Understanding Merge Conflicts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="topic-understanding-merge-conflicts.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Understanding Merge Conflicts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="topic-understanding-merge-conflicts.html#topic-understanding-merge-conflicts-3" class="internal"><span class="codenumber">6.1</span> <span class="title"></span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-synchronizing-with-the-upstream-repository.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Synchronizing with the Upstream Repository</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-merging-the-main-branch-into-a-feature-branch.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Merging the main Branch into a Feature Branch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="topic-resolving-a-merge-conflict.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Resolving a Merge Conflict</span></a></div></li>
@@ -340,7 +418,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Forking the Upstream Repository</span>
 </h2>
 <p class="watermark">Watermark text: DRAFT</p>
-<section class="introduction" id="topic-forking-the-upstream-2"><div class="para" id="topic-forking-the-upstream-2-1">In <a href="topic-basic-foss-workflow.html" class="internal" title="Section 3.4: Basic FOSS Workflow Concepts">Section 3.4</a> you saw how FOSS communities can use a basic workflow to collaborate. In this section you will begin to gain hands-on experience with that workflow. <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="internal" title="Figure 3.5.1">Figure 3.5.1</a> illustrates first step in the workflow. In this step you will <dfn class="terminology">fork</dfn> the main project repository, which creates a copy of it into your own GitHub space.</div> <div class="para" id="topic-forking-the-upstream-2-2"><figure class="figure figure-like" id="fig-basic-workflow-fork"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/ch-communities-and-collaboration/basic-workflow-fork.png" class="contained" alt="Creating a fork of the main project repo creates a copy of it in your own GitHub space. This copy is your remote copy."></div>
+<section class="introduction" id="topic-forking-the-upstream-2"><div class="para" id="topic-forking-the-upstream-2-1">In <a href="topic-basic-foss-workflow.html" class="internal" title="Section 3.4: Basic FOSS Workflow Concepts">Section 3.4</a> you saw how FOSS communities can use a basic workflow to collaborate. In this section you will begin to gain hands-on experience with that workflow. <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="xref" data-knowl="./knowl/xref/fig-basic-workflow-fork.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> illustrates first step in the workflow. In this step you will <dfn class="terminology">fork</dfn> the main project repository, which creates a copy of it into your own GitHub space.</div> <div class="para" id="topic-forking-the-upstream-2-2"><figure class="figure figure-like" id="fig-basic-workflow-fork"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/ch-communities-and-collaboration/basic-workflow-fork.png" class="contained" alt="Creating a fork of the main project repo creates a copy of it in your own GitHub space. This copy is your remote copy."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span>Forking the main project repository.</figcaption></figure></div> <div class="para" id="topic-forking-the-upstream-2-3">Note that when working on the GitKit you will not actually be interacting with the main FarmData2 repository. Instead, you will be interacting with a copy of the FarmData2 repository that was created just for these activities. That said, you will be treating this copy exactly as if it is the “Main Project Repo” or the upstream repository.  This allows you, your classmates and many other students to practice interacting with an upstream project for learning purposes without affecting the main FarmData2 repository.</div></section><section class="exercises" id="topic-forking-the-upstream-3"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title"></span>
 </h3>
@@ -351,21 +429,21 @@ eBookConfig.enable_chatcodes =  false;
 <script type="application/json">[[{"regex": "^\\s*^https:\/\/github.com\/((?!(FarmData2\/FarmData2|DickinsonCollege\/FarmData2)).)*$\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-upstream-url-2-1-1-1-1\">Thank you.<\/div>"}, {"regex": "^\\s*^https:\/\/github.com\/DickinsonCollege\/FarmData2\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-upstream-url-2-1-2-1-1\">Looks like you might be trying to use the real FarmData2 upstream. Be sure to use the URL that your instructor has given you.<\/div>"}, {"regex": "^\\s*^https:\/\/github.com\/FarmData2\/FarmData2\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-upstream-url-2-1-3-1-1\">Looks like you might be trying to use the real FarmData2 upstream. Be sure to use the URL that your instructor has given you.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-upstream-url-2-1-4-1-1\">Please give the full URL using the format indicated in the question.<\/div>"}]]</script>
 </div></div></div>
 <div class="solutions"><details id="ex-upstream-url-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.</div></details></div></article><article class="exercise exercise-like" id="ex-create-your-fork"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="introduction" id="ex-create-your-fork-1"><div class="para" id="ex-create-your-fork-1-1">Visit the upstream repository from <a href="topic-forking-the-upstream.html#ex-upstream-url" class="internal" title="Exercise 3.5.1">Exercise 3.5.1</a> in your browser and then complete the following tasks to create your fork.</div></div>
+<div class="introduction" id="ex-create-your-fork-1"><div class="para" id="ex-create-your-fork-1-1">Visit the upstream repository from <a href="topic-forking-the-upstream.html#ex-upstream-url" class="xref" data-knowl="./knowl/xref/ex-upstream-url.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.5.1">Exercise 3.5.1</a> in your browser and then complete the following tasks to create your fork.</div></div>
 <article class="task exercise-like" id="ex-find-fork"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="ex-find-fork-1-1">Find the "Fork" button on the upstream repository page. <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/ch-community-collaboration/fork-button.png" class="contained" alt="The fork button."></div>
 </div>
 <div class="solutions"><details id="ex-find-fork-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ex-find-fork-2-1">The fork button will be toward the upper right hand corner of the browser window.</div></div></details></div></article><article class="task exercise-like" id="ex-click-fork"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="ex-click-fork-1-1">Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username you used in <a href="topic-github-account.html#ex-github-account-url" class="internal" title="Exercise 3.2.2">Exercise 3.2.2</a> in the "Choose an owner" box so that your fork will be created in your GitHub space.</div></article></article><article class="exercise exercise-like" id="ex-fork-url"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="ex-click-fork-1-1">Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username you used in <a href="topic-github-account.html#ex-github-account-url" class="xref" data-knowl="./knowl/xref/ex-github-account-url.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.2.2">Exercise 3.2.2</a> in the "Choose an owner" box so that your fork will be created in your GitHub space.</div></article></article><article class="exercise exercise-like" id="ex-fork-url"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="ex-fork-url">
 <div class="para" id="ex-fork-url-1-1">Give the full URL of your fork of the upstream, for example: <code class="code-inline tex2jax_ignore">https://github.com/yourGitHub/theRepoName</code>
 </div> <div class="para" id="ex-fork-url-1-2"><input type="text" placeholder="Text" size="55"></div>
 <script type="application/json">[[{"regex": "^\\s*^https:\/\/github.com\/((?!(FarmData2\/FarmData2|DickinsonCollege\/FarmData2)).)*$\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-fork-url-2-1-1-1-1\">Thank you.<\/div>"}, {"regex": "^\\s*^https:\/\/github.com\/DickinsonCollege\/FarmData2\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-fork-url-2-1-2-1-1\">Looks like you might be giving the URL of the real FarmData2 upstream. Be sure to give the URL of the fork you created in your GitHub space.<\/div>"}, {"regex": "^\\s*^https:\/\/github.com\/FarmData2\/FarmData2\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-fork-url-2-1-3-1-1\">Looks like you might be trying to use the real FarmData2 upstream. Be sure to give the URL of the fork you created in your GitHub space.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-fork-url-2-1-4-1-1\">Please give the full URL using the format indicated in the question.<\/div>"}]]</script>
 </div></div></div>
 <div class="solutions"><details id="ex-fork-url-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.</div></details></div></article><article class="exercise exercise-like" id="ex-upstream-ref-from-origin"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="introduction" id="ex-upstream-ref-from-origin-1"><div class="para" id="ex-upstream-ref-from-origin-1-1">Notice that in <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="internal" title="Figure 3.5.1">Figure 3.5.1</a> there is an dashed orange arrow pointing from your remote copy (i.e. your origin) to the main project repo (i.e. the upstream). This arrow is indicating that your fork knows where the upstream project repository is located.</div></div>
+<div class="introduction" id="ex-upstream-ref-from-origin-1"><div class="para" id="ex-upstream-ref-from-origin-1-1">Notice that in <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="xref" data-knowl="./knowl/xref/fig-basic-workflow-fork.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> there is an dashed orange arrow pointing from your remote copy (i.e. your origin) to the main project repo (i.e. the upstream). This arrow is indicating that your fork knows where the upstream project repository is located.</div></div>
 <article class="task exercise-like" id="ex-upstream-ref-from-origin-a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="ex-upstream-ref-from-origin-a-1-1">Visit your origin repository on GitHub. There is some text and a link on that page that corresponds to the orange dashed arrow in <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="internal" title="Figure 3.5.1">Figure 3.5.1</a>.  Copy and paste that text and arrow here.</div>
+<div class="para" id="ex-upstream-ref-from-origin-a-1-1">Visit your origin repository on GitHub. There is some text and a link on that page that corresponds to the orange dashed arrow in <a href="topic-forking-the-upstream.html#fig-basic-workflow-fork" class="xref" data-knowl="./knowl/xref/fig-basic-workflow-fork.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a>.  Copy and paste that text and link here.</div>
 <div class="solutions"><details id="ex-upstream-ref-from-origin-a-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">This text and link will be near the repository name in the upper left corner of the window.</div></details></div></article><article class="task exercise-like" id="ex-upstream-ref-from-origin-b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" id="ex-upstream-ref-from-origin-b" data-multipleanswers="false" data-random="">
 <div class="para" id="ex-upstream-ref-from-origin-b-1-1">Which step of the basic FOSS workflow would require that your origin repository know the location of the upstream repository?</div>
@@ -382,9 +460,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="solutions"><details id="ex-upstream-ref-from-origin-b-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Think about which step of the basic FOSS workflow needs to send information back to the main project.</div></details></div></article><article class="task exercise-like" id="ex-upstream-ref-from-origin-c"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="ex-upstream-ref-from-origin-c-1-1">Explain in a few sentences why your origin repository keeps track of the location of the upstream repository from which it was forked.</div>
-<div class="solutions"><details id="ex-upstream-ref-from-origin-c-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Be sure to state which operation in the basic FOSS workflow uses this information and the function performed by that operation.</div></details></div></article></article></section></section></div>
+<div class="solutions"><details id="ex-upstream-ref-from-origin-c-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">Be sure to state which operation in the basic FOSS workflow uses this information and the function performed by that operation.</div></details></div></article></article><article class="exercise exercise-like" id="ex-no-issue-tracker-in-fork"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="ex-no-issue-tracker-in-fork-1-1">When you forked the upstream repository, GitHub made a copy of that repository into your GitHub space.</div> <div class="para" id="ex-no-issue-tracker-in-fork-1-2">Did it also make a copy of the issue tracker and its issues into your GitHub space?  What reasons can you think of for why the designers of GitHub decided that the issue tracker should not be copied into the fork?</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="topic-basic-foss-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="topic-local-development-environment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="topic-basic-foss-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="topic-development-environment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
